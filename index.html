@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <title>FakeSpace</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
+</head>
+<body>
+<header>
+    <div>
+        <div style="position: absolute;">
+            <aside>
+                <nav>
+                    <ol>
+                        <li><a href="#Definitions">Определения</a></li>
+                        <li><a href="#Satellites">Спутники</a></li>
+                        <li><a href="#Spaceship">Космические корабли</a></li>
+                        <li><a href="#SpaceTelescope">Космические телескопы</a></li>
+                        <li><a href="#SpaceStations">Космические станции</a></li>
+                        <li><a href="#Others">Другие</a></li>
+                    </ol>
+                </nav>
+            </aside>
+        </div>
+        <img class="center" width="200px" height="200px" src="favicon.png">
+        <h1 class="text-center">Космические Аппараты</h1>
+    </div>
+</header>
+<div class="box">
+    <div>
+        <div>
+            <article>
+                <h2 id="Definitions">Основные определения</h2>
+                <table>
+                    <dl>
+                        <tr>
+                            <td>
+                                <dt>Апогей</dt>
+                                <dd>
+                                    Наиболее удалённая от центра Земли точка орбиты спутника (естественного или
+                                    искусственного).
+                                </dd>
+                            </td>
+                            <td>
+                                <dt>Перигей</dt>
+                                <dd>
+                                    Ближайшая к центру Земли точка орбиты спутника.
+                                </dd>
+                            </td>
+                            <td>
+                                <dt>Экзопланета</dt>
+                                <dd>
+                                    Внесолнечная планета, то есть планета, которая находится вне нашей Солнечной
+                                    системы.
+                                </dd>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <dt>Космический аппарат</dt>
+                                <dd>
+                                    Общее название различных технических устройств, предназначенных для выполнения
+                                    целевых
+                                    задач
+                                    в
+                                    космическом пространстве.
+                                </dd>
+                            </td>
+                            <td>
+                                <dt>Линия Кармана</dt>
+                                <dd>
+                                    Согласованная на международном уровне условная граница космоса, пролегающая на
+                                    высоте
+                                    100 км
+                                    над
+                                    уровнем моря.
+                                </dd>
+                            </td>
+                            <td>
+                                <dt>Светой год</dt>
+                                <dd>
+                                    Расстояние, которое пройдет свет за 1 земной год. За секунду свет проходит примерно
+                                    300
+                                    000
+                                    км,
+                                    за
+                                    час - 1 080 000 000 км
+                                </dd>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <dt>Скафандр</dt>
+                                <dd>
+                                    Индивидуальный герметичный костюм, обеспечивающий условия для работы и
+                                    жизнедеятельности
+                                    космонавта в разрежённой атмосфере или в космическом пространстве. Различаются
+                                    аварийно-спасательные
+                                    и скафандры для внекорабельной деятельности.
+                                </dd>
+                            </td>
+                            <td>
+                                <dt>Первая космическая скорость</dt>
+                                <dd>
+                                    Наименьшая скорость, которую необходимо придать телу в горизонтальном направлении у
+                                    поверхности
+                                    планеты, чтобы оно вышло на круговую орбиту. Для Земли — примерно 7,9 км/с.
+                                </dd>
+                            </td>
+                            <td>
+                                <dt>Гибридный ракетный двигатель</dt>
+                                <dd>
+                                    Частный случай химического реактивного двигателя; устройство, использующее для
+                                    создания
+                                    тяги
+                                    химическую энергию взаимодействия компонентов топлива, пребывающих в различном
+                                    агрегатном
+                                    состоянии
+                                    (например, жидкий окислитель и твёрдое горючее).
+                                </dd>
+                            </td>
+                        </tr>
+                    </dl>
+                </table>
+            </article>
+        </div>
+        <main>
+            <section>
+                <label class="showCategory" id="Satellites" for="inputSat">Спутники</label>
+                <input type="checkbox" id="inputSat">
+                <div>
+
+                </div>
+            </section>
+            <section>
+                <label class="showCategory" id="Spaceship" for="inputShip">Космические корабли</label>
+                <input type="checkbox" id="inputShip">
+                <div>
+
+                </div>
+            </section>
+            <section>
+                <label class="showCategory" id="SpaceTelescope" for="inputTelescope">Космические телескопы</label>
+                <input type="checkbox" id="inputTelescope">
+                <div>
+
+                </div>
+            </section>
+            <section>
+                <label class="showCategory" id="SpaceStations" for="inputStation">Космические станции</label>
+                <input type="checkbox" id="inputStation">
+                <div>
+                    <abbr title="Международная космическая станция">МКС</abbr>
+                </div>
+            </section>
+            <section>
+                <label class="showCategory" id="Others" for="inputOther">Другие</label>
+                <input type="checkbox" id="inputOther">
+                <div>
+
+                </div>
+            </section>
+        </main>
+    </div>
+</div>
+<footer>
+    <div>
+        <address>
+            <a href="tel:392498123837322">Phone</a>
+            <p><a href="mailto:ikbo-02-21@mail.ru">Написать письмо</a></p>
+        </address>
+    </div>
+</footer>
+</body>
+</html>
+<style>
+    section {
+        margin-top: 1em;
+    }
+
+    body {
+        font-family: Arial;
+        color: whitesmoke;
+        background: rgb(51, 51, 68);
+    }
+
+    input, input + div {
+        display: none;
+    }
+
+    .showCategory {
+        text-shadow: 1px 1px 2px #00aeff, 0 0 1em #0000c5, 0 0 0.2em #000070;
+        font-size: 26px;
+    }
+
+    input:checked + div {
+        display: block;
+    }
+
+    footer a {
+        color: darkgray;
+    }
+
+    a:visited {
+        color: whitesmoke;
+        background-color: transparent;
+        text-decoration: none;
+    }
+
+    li {
+        margin-bottom: 15px;
+        font-size: 20px;
+    }
+
+    dt {
+        margin-left: 1em;
+        font-weight: bolder;
+    }
+
+    dd {
+        margin-left: 2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        max-width: 35em;
+    }
+
+    h2, .showCategory {
+        text-align: center;
+    }
+
+    footer {
+        text-align: right;
+    }
+
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    table {
+        background: rgb(46, 46, 63);
+        font-family: "Open Sans";
+    }
+
+    td {
+        padding: 1rem;
+        vertical-align: top;
+    }
+
+    td:hover {
+        background: rgb(61, 61, 78);
+    }
+
+    li a:active {
+        color: red;
+    }
+
+    .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .text-center {
+        text-align: center;
+    }
+</style>
+
+<!--TODO Заменить чекбоксы на плюс-минус-->
