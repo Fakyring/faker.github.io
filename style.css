@@ -1,0 +1,143 @@
+body {
+    font-family: Arial;
+    color: whitesmoke;
+    background: rgb(51, 51, 68);
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ссылки */
+a {
+    color: darkgray;
+}
+
+a:hover {
+    color: azure;
+}
+
+a:active {
+    color: red;
+}
+
+/* !Ссылки */
+/* Навигационный список */
+
+ul.inline {
+    width: 98%;
+    margin: 0px;
+    display: flex;
+    background: #2E2E3F;
+    justify-content: center;
+}
+
+ul.inline li {
+    display: inline-block;
+    margin-right: 5%;
+}
+
+ul.inline {
+    font-size: 20px;
+}
+
+ul.inline li a {
+    display: block;
+    position: relative;
+    line-height: 50px;
+    text-decoration: none;
+}
+
+ul.inline li ul {
+    display: none;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    background: #2E2E3F;
+}
+
+ul.inline li ul li {
+    width: 100%;
+    display: block;
+}
+
+ul.inline li:hover ul {
+    display: block;
+}
+
+/* !Навигационный список */
+/* Список аппаратов */
+
+input, input + div {
+    display: none;
+}
+
+.showCategory {
+    text-shadow: 1px 1px 2px #00aeff, 0 0 1em #0000c5, 0 0 0.2em #000070;
+    font-size: 26px;
+}
+
+input:checked + div {
+    display: block;
+}
+
+/* Список аппаратов */
+/* Описание */
+
+dt {
+    margin-left: 1em;
+    font-weight: bolder;
+}
+
+dd {
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 35em;
+}
+
+
+section {
+    margin-top: 1em;
+}
+
+/* !Описание */
+/* Определения */
+
+table {
+    background: rgb(46, 46, 63);
+    font-family: "Open Sans";
+}
+
+td {
+    padding: 1rem;
+    vertical-align: top;
+}
+
+td:hover {
+    background: rgb(61, 61, 78);
+}
+
+/* !Определения */
+
+h2, .showCategory {
+    text-align: center;
+}
+
+/* !Список аппаратов */
+
+footer {
+    text-align: right;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
