@@ -7,6 +7,7 @@ body {
 /* Ссылки */
 a {
     color: darkgray;
+    text-decoration: none;
 }
 
 a:hover {
@@ -21,40 +22,32 @@ a:active {
 /* Навигационный список */
 
 ul.inline {
-    width: 98%;
-    margin: 0;
     display: flex;
     background: #2E2E3F;
-    justify-content: center;
-}
-
-ul.inline li {
-    display: inline-block;
-    margin-right: 5%;
-}
-
-ul.inline {
-    font-size: 1.4vw;
+    justify-content: space-around;
+    font-size: 1.7vw;
 }
 
 ul.inline li a {
     display: block;
     position: relative;
     line-height: 50px;
-    text-decoration: none;
 }
 
 ul.inline li ul {
     display: none;
     position: absolute;
     margin: 0;
-    padding: 0;
-    background: #2E2E3F;
-    font-size: 1.3vw;
+    padding: 5px;
+    background: rgba(67, 67, 91, 0.9);
+    font-size: 1.2vw;
+}
+
+ul.inline li ul li a {
+    line-height: 35px;
 }
 
 ul.inline li ul li {
-    width: 100%;
     display: block;
 }
 
@@ -64,10 +57,14 @@ ul.inline li:hover ul {
 
 /* !Навигационный список */
 /* Список аппаратов */
-
-input, input + div {
-    display: none;
+main {
+    cursor: default;
 }
+
+/*
+input[type="checkbox"], input + div {
+    display: none;
+}*/
 
 input:checked + div {
     display: block;
@@ -82,27 +79,8 @@ input:checked + .basic_info {
 }
 
 /* Список аппаратов */
-/* Описание */
-
-dt {
-    margin-left: 1em;
-    font-weight: bolder;
-}
-
-dd {
-    margin-left: 2em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    max-width: 35em;
-}
-
-
-section {
-    margin-top: 1em;
-}
-
-/* !Описание */
 /* Определения */
+
 article {
     margin-top: 1em;
 }
@@ -122,6 +100,59 @@ td:hover {
 }
 
 /* !Определения */
+/* Описание */
+
+dt {
+    margin-left: 1em;
+    font-weight: bolder;
+}
+
+dd {
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    max-width: 35em;
+}
+
+
+section {
+    margin-top: 1em;
+}
+
+li span {
+    position: relative;
+    left: -30px;
+}
+
+.info {
+    width: 35%;
+    text-align: justify;
+    text-indent: 30px;
+    padding: 0 15px 0 10px;
+    margin: 10px 0 20px 0;
+}
+
+.info h3 {
+    text-align: center;
+}
+
+.left {
+    margin-left: 80px;
+    float: left;
+    box-shadow: 0px 5px 20px 6px rgba(0, 180, 255, 0.15);
+}
+
+.right {
+    margin-right: 80px;
+    float: right;
+    box-shadow: 0px 5px 20px 6px rgba(0, 255, 180, 0.1);
+}
+
+.bordered {
+    border-bottom: 1px solid;
+}
+
+/* !Описание */
 
 h2, .showCategory {
     font-size: 26px;
@@ -131,16 +162,6 @@ h2, .showCategory {
 
 footer {
     text-align: right;
-}
-
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.w100 {
-    width: 100%;
 }
 
 .contents {
@@ -153,10 +174,12 @@ footer {
     text-align: center;
 }
 
-.bordered {
-    border-bottom: 1px solid;
-}
-
 .text-left {
     text-align: left;
+}
+
+.arrowUp {
+    position: sticky;
+    float: right;
+    font-size: 30px;
 }
