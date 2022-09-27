@@ -61,10 +61,9 @@ main {
     cursor: default;
 }
 
-/*
 input[type="checkbox"], input + div {
     display: none;
-}*/
+}
 
 input:checked + div {
     display: block;
