@@ -10,6 +10,14 @@ a {
     text-decoration: none;
 }
 
+.logo {
+    width: 15vw;
+}
+
+.site-name {
+    font-size: 3vw;
+}
+
 a:hover {
     color: azure;
 }
@@ -20,39 +28,18 @@ a:active {
 
 /* !Ссылки */
 /* Навигационный список */
-
-ul.inline {
+.navigation {
     display: flex;
     background: #2E2E3F;
+    flex-direction: row;
     justify-content: space-around;
     font-size: 1.7vw;
+    padding: 0;
+    width: auto;
 }
 
-ul.inline li a {
-    display: block;
-    position: relative;
+.navigation a {
     line-height: 50px;
-}
-
-ul.inline li ul {
-    display: none;
-    position: absolute;
-    margin: 0;
-    padding: 5px;
-    background: rgba(67, 67, 91, 0.9);
-    font-size: 1.2vw;
-}
-
-ul.inline li ul li a {
-    line-height: 35px;
-}
-
-ul.inline li ul li {
-    display: block;
-}
-
-ul.inline li:hover ul {
-    display: block;
 }
 
 /* !Навигационный список */
@@ -70,7 +57,7 @@ input:checked + div {
 }
 
 input:not(:checked) + .definitions {
-    display: block;
+    display: flex;
 }
 
 input:checked + .definitions {
@@ -84,17 +71,21 @@ article {
     margin-top: 1em;
 }
 
-table {
-    background: rgb(46, 46, 63);
+.definitions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     font-family: "Open Sans", sans-serif;
+    background: rgb(46, 46, 63);
+    padding: 5px 0 5px 0;
 }
 
-td {
-    padding: 1rem;
-    vertical-align: top;
+.definitions div {
+    flex-basis: 31%;
+    padding: 10px;
 }
 
-td:hover {
+.definitions div:hover {
     background: rgb(61, 61, 78);
 }
 
@@ -109,8 +100,6 @@ dt {
 dd {
     margin-left: 2em;
     margin-top: 1em;
-    margin-bottom: 1em;
-    max-width: 35em;
 }
 
 section {
@@ -123,39 +112,43 @@ li span {
 }
 
 .info {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
     padding: 20px 0 30px 0;
 }
 
 .info div {
-    width: 35%;
+    border-radius: 20px;
+    width: 40%;
     text-align: justify;
     text-indent: 30px;
     padding: 0 15px 0 10px;
-    transition: box-shadow 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 
 .info h3 {
     text-align: center;
 }
 
+#menu:checked + header {
+    visibility: visible;
+}
+
 .left {
-    margin-left: 80px;
-    float: left;
     box-shadow: 0 5px 20px 6px rgba(0, 180, 255, 0.15);
 }
 
 .left:hover {
-    box-shadow: 0 5px 20px 15px rgba(0, 180, 255, 0.15);
+    box-shadow: 0 5px 20px 15px rgba(0, 180, 255, 0.25);
 }
 
 .right {
-    margin-right: 80px;
-    float: right;
-    box-shadow: 0 5px 20px 6px rgba(0, 255, 180, 0.1);
+    box-shadow: 0 5px 20px 6px rgba(0, 255, 180, 0.15);
 }
 
 .right:hover {
-    box-shadow: 0 5px 20px 15px rgba(0, 255, 180, 0.1);
+    box-shadow: 0 5px 20px 15px rgba(0, 255, 180, 0.25);
 }
 
 .bordered {
@@ -204,9 +197,55 @@ footer {
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+    display: none;
+}
+
+form input {
+    display: block;
+    margin-bottom: 10px;
 }
 
 .back:hover {
     color: aquamarine;
+}
+
+@media screen and (max-width: 1000px) {
+    .info {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .navigation {
+        justify-content: left;
+        flex-direction: column;
+    }
+    .navigation a {
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+    .info div {
+        margin-bottom: 50px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .definitions div {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .definitions {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .definitions div {
+        flex-basis: 90%;
+        font-size: 18px;
+    }
 }
