@@ -17,28 +17,27 @@
         <a href="https://vk.com/fakyring" target="_blank">
             <img class="logo" src="img/favicon.png">
         </a>
-        <h1 class="site-name text-center">Космические Аппараты</h1>
+        <h1 class="site-name">Космические Аппараты</h1>
     </div>
-    <label for="menu">=</label>
-    <input id="menu" type="checkbox">
-    <nav class="navigation">
-        <div>
-            <a href="#Definitions">Определения</a>
-        </div>
-        <div>
-            <a href="#Satellites">Спутники</a>
-        </div>
-        <div>
-            <a href="#Spaceship">Космические корабли</a>
-        </div>
-        <div>
-            <a href="#SpaceTelescope">Космические телескопы</a>
-        </div>
-        <div>
-            <a href="#SpaceStations">Космические станции</a>
-        </div>
-        <div>
-            <a href="#Others">Другие</a>
+    <nav id="navigation" class="navigation main">
+        <span><a href="#Definitions">Определения</a></span>
+        <span><a href="#Satellites">Спутники</a></span>
+        <span><a href="#Spaceship">Космические корабли</a></span>
+        <span><a href="#SpaceTelescope">Космические телескопы</a></span>
+        <span><a href="#SpaceStations">Космические станции</a></span>
+        <span><a href="#Others">Другие</a></span>
+    </nav>
+    <nav class="navigation burger">
+        <label for="menu"><img id="burger_icon" width="20px" src="img/hamburger_icon.png"></label>
+        <input id="menu" type="checkbox">
+        <div id="burger">
+            <img class="logo" src="img/favicon.png">
+            <span><a href="#Definitions">Определения</a></span>
+            <span><a href="#Satellites"><img src="img/satellite.png">Спутники</a></span>
+            <span><a href="#Spaceship">Космические корабли</a></span>
+            <span><a href="#SpaceTelescope">Космические телескопы</a></span>
+            <span><a href="#SpaceStations">Космические станции</a></span>
+            <span><a href="#Others">Другие</a></span>
         </div>
     </nav>
 </header>

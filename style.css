@@ -30,16 +30,57 @@ a:active {
 /* Навигационный список */
 .navigation {
     display: flex;
-    background: #2E2E3F;
+    padding: 0;
+}
+
+.navigation.main {
     flex-direction: row;
     justify-content: space-around;
+    background: #2E2E3F;
     font-size: 1.7vw;
-    padding: 0;
     width: auto;
 }
 
-.navigation a {
+.navigation.burger {
+    padding: 5px;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    width: max-content;
+    height: max-content;
+}
+
+.navigation.burger div {
+    visibility: hidden;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    background: rgba(44, 44, 58, 0.9);
+    top: -25px;
+    scale: 0;
+    transform-origin: left top;
+    border-radius: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.navigation.burger div img:not(.logo) {
+    position: relative;
+    top: 5px;
+    width: 20px;
+}
+
+.navigation.main a {
     line-height: 50px;
+}
+
+.navigation.burger img {
+    margin: auto;
+}
+
+.navigation.burger a {
+    line-height: 30px;
 }
 
 /* !Навигационный список */
@@ -54,6 +95,13 @@ input[type="checkbox"], input + div {
 
 input:checked + div {
     display: block;
+}
+
+input:checked + #burger {
+    visibility: visible;
+    top: 0;
+    left: 0;
+    scale: 1;
 }
 
 input:not(:checked) + .definitions {
@@ -76,6 +124,7 @@ article {
     flex-wrap: wrap;
     justify-content: center;
     font-family: "Open Sans", sans-serif;
+    margin-top: 10px;
     background: rgb(46, 46, 63);
     padding: 5px 0 5px 0;
 }
@@ -129,10 +178,6 @@ li span {
 
 .info h3 {
     text-align: center;
-}
-
-#menu:checked + header {
-    visibility: visible;
 }
 
 .left {
@@ -200,15 +245,11 @@ footer {
     display: none;
 }
 
-form input {
-    display: block;
-    margin-bottom: 10px;
-}
-
 .back:hover {
     color: aquamarine;
 }
 
+/*---------------------------------------------Media---------------------------------------------*/
 @media screen and (max-width: 1000px) {
     .info {
         align-items: center;
@@ -216,13 +257,9 @@ form input {
         flex-direction: column;
     }
 
-    .navigation {
-        justify-content: left;
-        flex-direction: column;
-    }
     .navigation a {
         line-height: 30px;
-        font-size: 18px;
+        font-size: 1.8vw;
     }
 
     .info div {
@@ -247,5 +284,28 @@ form input {
     .definitions div {
         flex-basis: 90%;
         font-size: 18px;
+    }
+
+    #arrowUp {
+        visibility: hidden;
+    }
+
+    .navigation a {
+        font-size: 3.0vw;
+    }
+
+    .navigation.main, header > div {
+        display: none;
+    }
+
+    .navigation.burger {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navigation.burger a {
+        font-size: 13px;
+        line-height: 30px;
     }
 }
