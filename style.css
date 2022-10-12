@@ -41,6 +41,10 @@ a:active {
     width: auto;
 }
 
+#burger_label {
+    width: max-content;
+}
+
 .navigation.burger {
     padding: 5px;
     visibility: hidden;
@@ -56,6 +60,7 @@ a:active {
     visibility: hidden;
     display: flex;
     position: relative;
+    height: 0;
     flex-direction: column;
     background: rgba(44, 44, 58, 0.9);
     top: -25px;
@@ -99,6 +104,7 @@ input:checked + div {
 
 input:checked + #burger {
     visibility: visible;
+    height: max-content;
     top: 0;
     left: 0;
     scale: 1;
