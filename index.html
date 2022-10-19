@@ -8,38 +8,48 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.png">
     <title>Fake Space</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css">
-    <link href="style.css" rel="stylesheet">
     <script src="script.js"></script>
+    <link rel="stylesheet" href="stylesheets/inputs.css">
+    <link rel="stylesheet" href="stylesheets/navigation.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <link rel="stylesheet" href="stylesheets/medias.css">
+    <link rel="stylesheet" href="stylesheets/6thwork.css">
 </head>
+<div id="remove_later">
+    <div class="buttons">
+        <button class="b1">Button</button>
+        <button class="b2">Button</button>
+        <button class="b3">Button</button>
+        <button class="b4">Button</button>
+    </div>
+    <div class="clock">
+        <div class="menu">
+            <span class="li li1">Item 1</span>
+            <span class="li li2">Item 2</span>
+            <span class="li li3">Item 3</span>
+            <span class="li li4">Item 4</span>
+        </div>
+    </div>
+    <div class="imgs">
+        <div class="image img1">
+            <img src="https://www.rtlnieuws.nl/sites/default/files/content/images/2021/11/18/STARSHIP_SN15_Desktop.jpg?itok=kUBHCNw8&width=1024&height=576&impolicy=semi_dynamic">
+        </div>
+        <div class="image img2">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/68/Buran_on_An-225_%28Le_Bourget_1989%29_1.JPEG">
+        </div>
+        <div class="image img3">
+            <img src="https://cdn.vox-cdn.com/thumbor/aHXO6jv95xIgZPboFI8oJGvXQR4=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/8592199/531752474.jpg">
+        </div>
+    </div>
+    <div class="videos">
+        <div class="video">
+            <video src="Space%20Engineers%20-%20Tracking%20Missile%20Cinematic.mp4" controls></video>
+        </div>
+    </div>
+</div>
 <body>
 <header>
-    <div class="text-center">
-        <a href="https://vk.com/fakyring" target="_blank">
-            <img class="logo" src="img/favicon.png">
-        </a>
-        <h1 class="site-name">Космические Аппараты</h1>
-    </div>
-    <nav id="navigation" class="navigation main">
-        <span><a href="#Definitions">Определения</a></span>
-        <span><a href="#Satellites">Спутники</a></span>
-        <span><a href="#Spaceship">Космические корабли</a></span>
-        <span><a href="#SpaceTelescope">Космические телескопы</a></span>
-        <span><a href="#SpaceStations">Космические станции</a></span>
-        <span><a href="#Others">Другие</a></span>
-    </nav>
-    <nav class="navigation burger">
-        <label id="burger_label" for="menu"><img id="burger_icon" width="20px" src="img/hamburger_icon.png"></label>
-        <input id="menu" type="checkbox">
-        <div id="burger">
-            <img class="logo" src="img/favicon.png">
-            <span><a href="#Definitions">Определения</a></span>
-            <span><a href="#Satellites"><img src="img/satellite.png">Спутники</a></span>
-            <span><a href="#Spaceship">Космические корабли</a></span>
-            <span><a href="#SpaceTelescope">Космические телескопы</a></span>
-            <span><a href="#SpaceStations">Космические станции</a></span>
-            <span><a href="#Others">Другие</a></span>
-        </div>
-    </nav>
+    <!--Here is the navigation, dynamically added using js (check nav.html)-->
 </header>
 <main>
     <a id="arrowUp" class="back text-center" href="#"><span>↑</span></a>

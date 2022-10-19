@@ -1,0 +1,64 @@
+@media screen and (min-width: 1600px) {
+    .info div {
+        font-size: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .info {
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .navigation a {
+        line-height: 30px;
+        font-size: 1.8vw;
+    }
+
+    .info div {
+        margin-bottom: 50px;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .definitions div {
+        flex-basis: 45%;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .definitions {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    .definitions div {
+        flex-basis: 90%;
+    }
+
+    #arrowUp {
+        visibility: hidden;
+    }
+
+    .navigation a {
+        font-size: 3.0vw;
+    }
+
+    .navigation.main, header > div {
+        display: none;
+    }
+
+    .navigation.burger {
+        visibility: visible;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .navigation.burger a {
+        font-size: 13px;
+        line-height: 30px;
+    }
+}

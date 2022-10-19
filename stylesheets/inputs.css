@@ -1,0 +1,27 @@
+input[type="checkbox"], input + div {
+    display: none;
+}
+
+input:checked + div {
+    display: block;
+}
+
+input:checked ~ #burger {
+    visibility: visible;
+    height: max-content;
+    top: 0;
+    left: 0;
+    scale: 1;
+}
+
+input:checked + label {
+    rotate: 90deg;
+}
+
+input:not(:checked) + .definitions {
+    display: flex;
+}
+
+input:checked + .definitions {
+    display: none;
+}
