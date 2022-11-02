@@ -1,0 +1,286 @@
+body {
+    background: #2B2B2B;
+    color: white;
+    font-family: "Bahnschrift", serif;
+    cursor: default;
+}
+
+a {
+    color: yellow;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a + a {
+    margin-left: 10px;
+}
+
+header img {
+    width: 100px;
+}
+
+.container1 {
+    margin-top: 10px;
+    display: grid;
+    grid-template-rows: fit-content(0) fit-content(0) 1fr fit-content(0);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "sidebar navigation ads"
+    "sidebar main ads"
+    "footer footer footer";
+    gap: 15px;
+    text-align: justify;
+}
+
+header {
+    text-align: center;
+    grid-area: header;
+    width: 100%;
+    height: fit-content;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    width: 100%;
+    height: fit-content;
+}
+
+nav {
+    background: #60656B;
+    text-align: center;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    grid-area: navigation;
+    height: calc(100% - 1rem);
+}
+
+main {
+    grid-area: main;
+    width: 100%;
+    height: fit-content;
+}
+
+.ads {
+    margin-top: 1rem;
+    grid-area: ads;
+    width: 100%;
+    height: fit-content;
+}
+
+.ads img {
+    width: 100%;
+}
+
+footer {
+    grid-area: footer;
+    height: fit-content;
+    position: relative;
+    display: grid;
+    align-items: start;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li + li {
+    margin-top: 5px;
+}
+
+.col img {
+    width: 50px;
+}
+
+.social ul li {
+    display: inline;
+}
+
+@media (max-width: 1024px) {
+    .container1 {
+        grid-template-rows: fit-content(0) fit-content(0) 1fr fit-content(0);
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "header header"
+        "navigation navigation"
+        "sidebar main"
+        "ads footer";
+    }
+
+    footer {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, fit-content(0));
+    }
+
+    footer h1 {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .container1 {
+        grid-template-rows: repeat(6, fit-content(0));
+        grid-template-columns: 100%;
+        grid-template-areas:
+        "header"
+        "navigation"
+        "main"
+        "sidebar"
+        "ads"
+        "footer";
+        font-size: 12px;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, fit-content(0));
+        gap: 20px;
+    }
+
+    ul {
+        margin: 0;
+    }
+}
+
+
+.container2 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-auto-flow: dense;
+    gap: 10px;
+}
+
+.container2 div {
+    background: #333333;
+    padding: 10px;
+    position: relative;
+    transition: 0.4s all;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.container2 div:hover {
+    background: #251A41;
+}
+
+.item1 {
+    grid-column: span 2;
+}
+
+.item2 {
+    grid-row: span 2;
+}
+
+.item4 {
+    grid-row: span 2;
+}
+
+.item7 {
+    grid-column: span 3;
+}
+
+.container3 {
+    background: #333333;
+    padding: 10px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    transition: 0.3s all;
+}
+
+.container3 h1 {
+    margin: 0 0 10px 0;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: repeat(2, fit-content(0)) 1fr fit-content(0);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.form div {
+    position: relative;
+}
+
+.message {
+    grid-column: span 2;
+}
+
+.form input, .msgtxt {
+    background: none;
+    border: none;
+    border-bottom: aqua solid;
+    width: 100%;
+    transition: 0.3s background-color;
+}
+
+.msgtxt {
+    height: 1.1rem;
+    resize: vertical;
+    min-height: 1.1rem;
+}
+
+label {
+    position: absolute;
+    color: white;
+    font-family: Bahnschrift, serif;
+    top: 0;
+    left: 0;
+    transition: 0.3s top;
+    cursor: text;
+}
+
+.form input[type="submit"] {
+    width: 5rem;
+    height: 2rem;
+    border: none;
+    background: aqua;
+    border-radius: 5px;
+}
+
+.form input:focus, .msgtxt:focus {
+    background-color: aqua;
+}
+
+.form input:focus + label, .msgtxt:focus + label {
+    top: -18px;
+}
+
+.form input[type="submit"]:hover {
+    background: #00c2c2;
+}
+
+.form input[type="submit"]:active {
+    background: #008181;
+}
+
+@media (max-width: 1000px) {
+    label {
+        font-size: 1.5vw;
+    }
+}
+
+@media (max-width: 712px) {
+    .container3 {
+        width: 70%;
+    }
+
+    .form {
+        grid-template-rows: repeat(6, fit-content(0));
+        grid-template-columns: 1fr;
+    }
+
+    .message {
+        grid-column: span 1;
+    }
+
+    label {
+        font-size: 0.7rem;
+    }
+}
