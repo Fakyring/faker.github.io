@@ -1,0 +1,59 @@
+body {
+    background: #2B2B2B;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin: auto;
+    width: 50%;
+    height: 90vh;
+}
+
+button {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding: 0;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button:nth-child(1) {
+    background: url("https://www.drupal.org/files/project-images/reg_confirm_email_with_button_0.png");
+    background-size: 200px;
+}
+
+button:nth-child(2) {
+    background: url("https://cdn-icons-png.flaticon.com/512/1421/1421222.png");
+    background-size: 200px;
+}
+
+.like {
+    border-radius: 20px;
+    width: 70px;
+    height: 30px;
+}
+
+.like span {
+    position: absolute;
+    right: 15px;
+    top: 7px;
+}
+
+.like img {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    width: 20px;
+}
+
+.newimg {
+    width: 20px;
+    z-index: -1;
+}
