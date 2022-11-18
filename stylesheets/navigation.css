@@ -13,7 +13,7 @@
 
 #burger_label {
     width: max-content;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.2s linear;
 }
 
 .navigation.burger {
@@ -28,10 +28,8 @@
 }
 
 .navigation.burger div {
-    visibility: hidden;
     display: flex;
     position: relative;
-    height: 0;
     flex-direction: column;
     background: rgba(44, 44, 58, 0.9);
     top: -25px;
@@ -57,4 +55,17 @@
 
 .navigation.burger a {
     line-height: 30px;
+}
+
+.logo {
+    width: 11vw;
+}
+
+.logo.bg_item {
+    width: 9vw;
+}
+
+.site-name {
+    margin-top: 10px;
+    font-size: 2vw;
 }
