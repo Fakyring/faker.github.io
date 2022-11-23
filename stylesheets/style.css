@@ -5,7 +5,54 @@ body {
     cursor: default;
 }
 
-/* Ссылки */
+.container {
+    margin: 20px auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    row-gap: 15px;
+    column-gap: 30px;
+}
+
+.container a {
+    position: relative;
+}
+
+.container a img {
+    width: 300px;
+    height: 200px;
+    border-radius: 20px;
+}
+
+.container a:before {
+    position: absolute;
+    padding: 10px;
+    left: -1.8rem;
+    top: -10px;
+    width: calc(100% + 2.5em);
+    height: 100%;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    text-align: justify;
+    transform-origin: center;
+    scale: 0;
+    background: rgba(43, 43, 43, 0.3);
+    transition: 0.3s all ease-in-out;
+}
+
+.container a:hover:before {
+    scale: 1;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+/* Links */
 
 a {
     color: darkgray;
@@ -16,19 +63,11 @@ a:hover {
     color: azure;
 }
 
-a:active {
+nav * a:active {
     color: red;
 }
 
-/* !Ссылки */
-
-section {
-    margin-top: 1em;
-}
-
-h2 {
-    font-size: 26px;
-}
+/*  Footer  */
 
 footer {
     margin-top: 10px;

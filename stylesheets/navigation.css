@@ -1,6 +1,7 @@
 .navigation {
     display: flex;
     padding: 0;
+    z-index: 999;
 }
 
 .navigation.main {
@@ -36,6 +37,7 @@
     scale: 0;
     transform-origin: left top;
     border-radius: 10px;
+    padding: 0 5px;
     transition: all 0.5s ease-in-out;
 }
 
@@ -68,4 +70,13 @@
 .site-name {
     margin-top: 10px;
     font-size: 2vw;
+}
+
+@keyframes hideBurgerMenu {
+    100% {
+        width: 0;
+        height: 0;
+        font-size: 0;
+        line-height: 0;
+    }
 }

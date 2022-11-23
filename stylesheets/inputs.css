@@ -9,6 +9,10 @@ input:checked ~ #burger {
     scale: 1;
 }
 
+input:not(:checked) ~ #burger * {
+    animation: hideBurgerMenu 1ms 0.7s forwards;
+}
+
 input:checked + label {
     rotate: 90deg;
 }
