@@ -1,8 +1,19 @@
 window.onload = function () {
+    let container = document.querySelector(".container");
     let nav = document.getElementById("navigation");
     let arrow = document.getElementById("arrowUp");
     let burger_check = document.getElementById("menu");
     let mediaQuery = window.matchMedia('(min-width: 660px)');
+    let items = document.querySelectorAll(".container a");
+    items = Array.from(items);
+    //Set "changeInformationStatus" function to click event on images
+    for (let i = 0; i < items.length; i++) {
+        items[i].onclick = changeInformationStatus;
+    }
+
+    //Adding header and footer
+    addElement("header");
+    addElement("footer");
 
     function addElement(tag) {
         let xhr = new XMLHttpRequest();
@@ -27,27 +38,50 @@ window.onload = function () {
         }
     }
 
-    addElement("header");
-    addElement("footer");
-
-    //Checks if main menu is in viewport
-    function isInViewport(el) {
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0
-        );
-    }
-
     //Hide burger menu if changed window size
-    window.addEventListener('resize', function () {
+    onresize = function () {
         if (mediaQuery.matches)
             burger_check.checked = false;
-    })
-    //Hide burger menu if clicked out of it
-    document.addEventListener('click', function (e) {
+    }
+
+    //Hide burger menu and images info if clicked out of them
+    onclick = function (e) {
         if (burger_check.checked === true)
             if (!e.target.classList.contains("bg_item")) {
                 burger_check.checked = false;
             }
+        if (!items.includes(e.target) && !items.includes(e.target.parentNode)) {
+            for (let i = 0; i < items.length; i++) {
+                items[i].classList.remove("hovered");
+            }
+        }
+    }
+
+    container.addEventListener("wheel", (e) => {
+        container.scrollLeft += e.deltaY;
     });
+}
+
+//Checks if main menu is in viewport
+function isInViewport(el) {
+    const rect = el.getBoundingClientRect();
+    return (
+        rect.top >= 0
+    );
+}
+
+function changeInformationStatus() {
+    if (this.classList.contains("hovered"))
+        this.classList.remove("hovered");
+    else
+        this.classList.add("hovered");
+}
+
+let map = {};
+onkeydown = function (e) {
+    if (e.key === "F") {
+        let login = prompt("Логин");
+        if (login==="admin")
+            document.getElementsByClassName("hidden")[0].classList.remove("hidden");
+    }
 }

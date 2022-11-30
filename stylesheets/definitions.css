@@ -7,14 +7,17 @@ article {
     flex-wrap: wrap;
     justify-content: space-around;
     font-family: "Open Sans", sans-serif;
-    margin-top: 10px;
+    margin: 10px auto;
+    width: 95%;
     text-align: left;
-    background: rgb(46, 46, 63);
     padding: 10px 0;
+    row-gap: 10px;
 }
 
 .definitions div {
+    border-radius: 10px;
     flex-basis: 32%;
+    background: rgb(41, 41, 56);
 }
 
 .definitions div:hover {
@@ -22,12 +25,12 @@ article {
 }
 
 dt {
-    margin-left: 1em;
+    text-align: center;
     font-weight: bolder;
 }
 
 dd {
-    margin-left: 1.5rem;
+    margin-left: 0;
     margin-top: 0.1em;
     padding: 5px;
     font-size: 90%;

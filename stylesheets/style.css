@@ -6,46 +6,61 @@ body {
 }
 
 .container {
+    scroll-snap-type: x mandatory;
+    border-radius: 20px;
+    scroll-behavior: smooth;
+    position: relative;
     margin: 20px auto;
-    width: 90%;
+    padding: 20px;
+    width: 80%;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    overflow-y: hidden;
+    overflow-x: scroll;
     text-align: center;
-    flex-wrap: wrap;
-    row-gap: 15px;
-    column-gap: 30px;
+    flex-wrap: nowrap;
+    align-items: center;
+    box-shadow: inset 0 0 10px 1px #83D4FF;
+    outline: solid #83D4FF;
 }
 
 .container a {
+    scroll-snap-align: start;
     position: relative;
+    padding: 0 10px;
 }
 
 .container a img {
-    width: 300px;
-    height: 200px;
+    margin: auto;
     border-radius: 20px;
+    height: 230px;
+    width: 230px;
+    cursor: pointer;
 }
 
 .container a:before {
     position: absolute;
+    cursor: pointer;
     padding: 10px;
-    left: -1.8rem;
+    left: -10px;
     top: -10px;
-    width: calc(100% + 2.5em);
+    width: 100%;
     height: 100%;
     border-radius: 20px;
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(1px);
     text-align: justify;
     transform-origin: center;
     scale: 0;
-    background: rgba(43, 43, 43, 0.3);
+    font-size: 0.9em;
+    background: rgba(43, 43, 43, 0.2);
     transition: 0.3s all ease-in-out;
 }
 
-.container a:hover:before {
+.container .hovered:before {
     scale: 1;
+}
+
+.container .hovered:hover:before {
+    backdrop-filter: blur(5px);
 }
 
 h2 {
@@ -65,6 +80,11 @@ a:hover {
 
 nav * a:active {
     color: red;
+}
+
+pre {
+    font-size: 16px;
+    font-family: "Arial", serif;
 }
 
 /*  Footer  */
@@ -105,6 +125,10 @@ footer img:hover {
 
 #arrowUp:hover {
     color: aquamarine;
+}
+
+.hidden {
+    display: none;
 }
 
 ::-webkit-scrollbar {
