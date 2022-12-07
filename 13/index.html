@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Thirteen</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <div id="contents" onclick="confirmRedirect(event)" class="first">
+        <a href="https://www.w3schools.com/jsref/event_ondragstart.asp"><span><span>Click me</span></span></a>
+        <a href="https://freetp.org/po-seti/5276-warhammer-40000-darktide-igra-po-seti-i-internetu-onlayn.html">Click
+            me</a>
+        <a href="https://web.whatsapp.com/">Click me</a>
+    </div>
+    <div class="gallery">
+        <div id="main_image" class="main_image"><img></div>
+        <div class="images_list" onclick="changeMainImage(event)">
+            <img src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__480.jpg">
+            <img src="https://cdn.pixabay.com/photo/2018/08/14/13/23/ocean-3605547__340.jpg">
+            <img src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg">
+            <img src="https://www.nasa.gov/sites/default/files/styles/full_width/public/thumbnails/image/main_image_star-forming_region_carina_nircam_final-1280.jpg">
+        </div>
+    </div>
+    <div class="third">
+        <ul onclick="selectElements(event)" id="list">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+        </ul>
+    </div>
+    <div class="forth">
+        <div id="slideContainer" class="slider">
+            <span id="slide" class="slide">0</span>
+        </div>
+    </div>
+    <div class="fifth">
+        <div class="shop">
+            <div class="item"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/d/d6/STS120LaunchHiRes-edit1.jpg">
+                <span>Космический аппарат</span>
+                <span class="cost">2000$</span>
+            </div>
+            <div class="item"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/d/d6/STS120LaunchHiRes-edit1.jpg">
+                <span>Космический аппарат2</span>
+                <span class="cost">7000$</span>
+            </div>
+            <div class="item"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/d/d6/STS120LaunchHiRes-edit1.jpg">
+                <span>Космический аппарат3</span>
+                <span class="cost">5000$</span>
+            </div>
+        </div>
+        <div id="kart" class="kart" onmouseover="placeable = true" onmouseout="placeable = false">
+            <span id="totalCost" class="totalCost">0</span>
+        </div>
+    </div>
+    <div class="sixth">
+        <progress onclick="showAnim(this)" id="elem"></progress>
+    </div>
+</div>
+</body>
+</html>
